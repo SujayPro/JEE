@@ -1,0 +1,25 @@
+# This file is a minimal app.toml excerpt for JEE Chain nodes.
+# Copy relevant sections into ~/.jeechain/config/app.toml after `jeed init`.
+
+# Zero-fee chain: validators MUST accept 0jeff gas prices.
+minimum-gas-prices = "0jeff"
+
+[api]
+enable = true
+address = "tcp://127.0.0.1:1317"
+swagger = true
+
+[grpc]
+enable = true
+address = "127.0.0.1:9090"
+
+[grpc-web]
+enable = true
+
+[telemetry]
+enabled = true
+prometheus-retention-time = 60
+
+[mana]
+# Mana module is configured via genesis, not app.toml.
+# See config/genesis.json → app_state.mana

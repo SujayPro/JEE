@@ -1,0 +1,300 @@
+{
+  "app_name": "\u003cappd\u003e",
+  "app_version": "",
+  "genesis_time": "2026-06-21T13:00:00.0000000Z",
+  "chain_id": "JEE",
+  "initial_height": 1,
+  "app_hash": null,
+  "app_state": {
+    "auth": {
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": [
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "jee1gqu7qhvcv9p9x9m08xqnw4g7u08ct6d04g564p",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "jee15hdqt89vpcduhff6yh3kmnlunngxpwj2j74phq",
+          "pub_key": null,
+          "account_number": "1",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "jee1569t9gs3ald3rsvnyct23y9esusrw03xmmwj9k",
+          "pub_key": null,
+          "account_number": "2",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "jee1a5u6vulgfp78tk3fam8n7t2aks6exdm9nn6489",
+          "pub_key": null,
+          "account_number": "3",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "jee1qc6dml9km2q28kv5f20p3wmwdn373nrxgtnw0z",
+          "pub_key": null,
+          "account_number": "4",
+          "sequence": "0"
+        }
+      ]
+    },
+    "bank": {
+      "params": {
+        "send_enabled": [],
+        "default_send_enabled": true
+      },
+      "balances": [
+        {
+          "address": "jee1gqu7qhvcv9p9x9m08xqnw4g7u08ct6d04g564p",
+          "coins": [
+            {
+              "denom": "jeff",
+              "amount": "96057830000000"
+            }
+          ]
+        },
+        {
+          "address": "jee15hdqt89vpcduhff6yh3kmnlunngxpwj2j74phq",
+          "coins": [
+            {
+              "denom": "jeff",
+              "amount": "81708070000000"
+            }
+          ]
+        },
+        {
+          "address": "jee1569t9gs3ald3rsvnyct23y9esusrw03xmmwj9k",
+          "coins": [
+            {
+              "denom": "jeff",
+              "amount": "30875000000000"
+            }
+          ]
+        },
+        {
+          "address": "jee1a5u6vulgfp78tk3fam8n7t2aks6exdm9nn6489",
+          "coins": [
+            {
+              "denom": "jeff",
+              "amount": "25836200000000"
+            }
+          ]
+        },
+        {
+          "address": "jee1qc6dml9km2q28kv5f20p3wmwdn373nrxgtnw0z",
+          "coins": [
+            {
+              "denom": "jeff",
+              "amount": "12522900000000"
+            }
+          ]
+        }
+      ],
+      "supply": [
+        {
+          "denom": "jeff",
+          "amount": "247000000000000"
+        }
+      ],
+      "denom_metadata": [
+        {
+          "description": "JEE Money \u2014 native token of JEE. https://jee.money",
+          "denom_units": [
+            {
+              "denom": "jeff",
+              "exponent": 0
+            },
+            {
+              "denom": "jee",
+              "exponent": 6,
+              "aliases": [
+                "JEE"
+              ]
+            }
+          ],
+          "base": "jeff",
+          "display": "jee",
+          "name": "JEE Money",
+          "symbol": "JEE"
+        }
+      ],
+      "send_enabled": []
+    },
+    "consensus": null,
+    "crisis": {
+      "constant_fee": {
+        "denom": "jeff",
+        "amount": "1000"
+      }
+    },
+    "distribution": {
+      "params": {
+        "community_tax": "0.020000000000000000",
+        "base_proposer_reward": "0.000000000000000000",
+        "bonus_proposer_reward": "0.000000000000000000",
+        "withdraw_addr_enabled": true
+      },
+      "fee_pool": {
+        "community_pool": []
+      },
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
+    },
+    "evidence": {
+      "evidence": []
+    },
+    "genutil": {
+      "gen_txs": []
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": [],
+      "votes": [],
+      "proposals": [],
+      "deposit_params": null,
+      "voting_params": null,
+      "tally_params": null,
+      "params": {
+        "min_deposit": [
+          {
+            "denom": "jeff",
+            "amount": "10000000"
+          }
+        ],
+        "max_deposit_period": "172800s",
+        "voting_period": "172800s",
+        "quorum": "0.334000000000000000",
+        "threshold": "0.500000000000000000",
+        "veto_threshold": "0.334000000000000000",
+        "min_initial_deposit_ratio": "0.000000000000000000",
+        "proposal_cancel_ratio": "0.500000000000000000",
+        "proposal_cancel_dest": "",
+        "expedited_voting_period": "86400s",
+        "expedited_threshold": "0.667000000000000000",
+        "expedited_min_deposit": [
+          {
+            "denom": "jeff",
+            "amount": "50000000"
+          }
+        ],
+        "burn_vote_quorum": false,
+        "burn_proposal_deposit_prevote": false,
+        "burn_vote_veto": true,
+        "min_deposit_ratio": "0.010000000000000000"
+      },
+      "constitution": ""
+    },
+    "mana": {
+      "params": {
+        "total_mana_pool": 1000000000,
+        "max_tx_per_block": 20,
+        "blocks_per_year": 31557600,
+        "mana_regen_multiplier": 1
+      },
+      "account_manas": [
+        {
+          "address": "jee1569t9gs3ald3rsvnyct23y9esusrw03xmmwj9k",
+          "mana": 500000000,
+          "last_update_height": 0,
+          "tx_count_this_block": 0,
+          "last_tx_block": 0
+        },
+        {
+          "address": "jee1qc6dml9km2q28kv5f20p3wmwdn373nrxgtnw0z",
+          "mana": 500000000,
+          "last_update_height": 0,
+          "tx_count_this_block": 0,
+          "last_tx_block": 0
+        }
+      ]
+    },
+    "mint": {
+      "minter": {
+        "inflation": "0.050000000000000000",
+        "annual_provisions": "0.000000000000000000"
+      },
+      "params": {
+        "mint_denom": "jeff",
+        "inflation_rate_change": "0.130000000000000000",
+        "inflation_max": "0.050000000000000000",
+        "inflation_min": "0.050000000000000000",
+        "goal_bonded": "0.670000000000000000",
+        "blocks_per_year": "31557600"
+      }
+    },
+    "params": null,
+    "slashing": {
+      "params": {
+        "signed_blocks_window": "10000",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600s",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": [],
+      "missed_blocks": []
+    },
+    "staking": {
+      "params": {
+        "unbonding_time": "1814400s",
+        "max_validators": 100,
+        "max_entries": 7,
+        "historical_entries": 10000,
+        "bond_denom": "jeff",
+        "min_commission_rate": "0.05"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": [],
+      "validators": [],
+      "delegations": [],
+      "unbonding_delegations": [],
+      "redelegations": [],
+      "exported": false
+    },
+    "upgrade": {}
+  },
+  "consensus": {
+    "params": {
+      "block": {
+        "max_bytes": "22020096",
+        "max_gas": "100000000"
+      },
+      "evidence": {
+        "max_age_num_blocks": "100000",
+        "max_age_duration": "172800000000000",
+        "max_bytes": "1048576"
+      },
+      "validator": {
+        "pub_key_types": [
+          "ed25519"
+        ]
+      },
+      "version": {
+        "app": "0"
+      },
+      "abci": {
+        "vote_extensions_enable_height": "0"
+      }
+    }
+  }
+}

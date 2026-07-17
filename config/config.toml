@@ -1,0 +1,75 @@
+# CometBFT configuration for JEE Chain
+# Target: ~1 second block time (fast, but still realistic for decentralized BFT)
+#
+# Copy to ~/.jeechain/config/config.toml after `jeed init`
+# NOTE: Sub-millisecond blocks are NOT possible on any decentralized chain.
+#       1s is an aggressive, Solana-class target for Cosmos SDK.
+
+[consensus]
+# Block time ≈ timeout_commit + vote propagation (~1s total)
+timeout_propose = "400ms"
+timeout_propose_delta = "100ms"
+timeout_prevote = "400ms"
+timeout_prevote_delta = "100ms"
+timeout_precommit = "400ms"
+timeout_precommit_delta = "100ms"
+timeout_commit = "800ms"
+skip_timeout_commit = false
+create_empty_blocks = true
+create_empty_blocks_interval = "0s"
+peer_gossip_sleep_duration = "10ms"
+peer_query_maj23_sleep_duration = "20ms"
+
+[mempool]
+# Accept txs quickly; they confirm in the next ~1s block
+type = "flood"
+recheck = true
+broadcast = true
+wal_dir = ""
+# Max NUMBER of txs held in the mempool (bounds node memory under a flood).
+# NOTE: the CometBFT key is "size", not "max_txs".
+size = 5000
+# Max TOTAL bytes of all txs in the mempool (256 MiB) — OOM protection.
+max_txs_bytes = 268435456
+# Hard per-tx byte cap. Keep >= the app-level MaxTxBytes (1 MiB).
+max_tx_bytes = 1048576
+# Cache of recently seen tx hashes so duplicate/replayed spam is dropped cheaply.
+cache_size = 100000
+keep-invalid-txs-in-cache = false
+max_batch_bytes = 0
+ttl-duration = "0s"
+ttl-num-blocks = 0
+
+[p2p]
+# Listen on all interfaces — required for other validators to connect.
+laddr = "tcp://0.0.0.0:26656"
+# Public IP:port this node advertises to peers — set at deploy time (see deploy/OPERATIONS.md).
+external_address = ""
+# Founder node: leave seeds empty; other operators use config/network.json seed.
+# When you add validators, append their node_id@ip:26656 to persistent_peers below.
+seeds = ""
+persistent_peers = ""
+pex = true
+addr_book_strict = false
+max_num_inbound_peers = 100
+max_num_outbound_peers = 40
+flush_throttle_timeout = "10ms"
+send_rate = 5120000
+recv_rate = 5120000
+# Cap the size of a single peer message payload (anti-abuse).
+max_packet_msg_payload_size = 10240
+
+[rpc]
+# Bind locally; nginx at rpc.jee.money proxies to this port.
+laddr = "tcp://127.0.0.1:26657"
+cors_allowed_origins = ["https://jee.money", "https://api.jee.money", "https://rpc.jee.money", "https://jeescan.org"]
+# Cap concurrent RPC connections to avoid file-descriptor / socket exhaustion.
+max_open_connections = 900
+# Websocket subscription DoS protection.
+max_subscription_clients = 100
+max_subscriptions_per_client = 5
+# Reject oversized RPC request bodies/headers.
+max_body_bytes = 2000000
+max_header_bytes = 1048576
+# Bound how long a broadcast_tx_commit call can hold a connection open.
+timeout_broadcast_tx_commit = "10s"

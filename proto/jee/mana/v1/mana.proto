@@ -1,0 +1,27 @@
+syntax = "proto3";
+package jee.mana.v1;
+
+option go_package = "github.com/jee-chain/jee/x/mana/types";
+
+// Params defines the configurable parameters for the Mana module.
+message Params {
+  uint64 total_mana_pool = 1;
+  uint64 max_tx_per_block = 2;
+  uint64 blocks_per_year = 3;
+  uint64 mana_regen_multiplier = 4;
+}
+
+// AccountMana tracks per-account bandwidth state.
+message AccountMana {
+  string address = 1;
+  uint64 mana = 2;
+  int64 last_update_height = 3;
+  uint32 tx_count_this_block = 4;
+  int64 last_tx_block = 5;
+}
+
+// GenesisState defines the mana module genesis state.
+message GenesisState {
+  Params params = 1;
+  repeated AccountMana account_manas = 2;
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "../assetlist.schema.json",
+  "chain_name": "jeechain",
+  "assets": [
+    {
+      "description": "JEE Money is the native token of JEE. https://jee.money",
+      "denom_units": [
+        {
+          "denom": "jeff",
+          "exponent": 0
+        },
+        {
+          "denom": "jee",
+          "exponent": 6,
+          "aliases": ["JEE"]
+        }
+      ],
+      "base": "jeff",
+      "name": "JEE Money",
+      "display": "jee",
+      "symbol": "JEE",
+      "logo_URIs": {
+        "png": "https://jee.money/assets/logo/jee-money.png",
+        "svg": "https://jee.money/assets/logo/jee-money.svg"
+      },
+      "coingecko_id": "",
+      "keywords": ["jee", "jee-money", "native", "staking"]
+    }
+  ]
+}

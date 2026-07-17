@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 32 32" role="img" aria-label="JEE CHAIN">
+  <defs>
+    <linearGradient id="jee-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E6A8"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="4" fill="#0A0A0A"/>
+  <path fill="url(#jee-gold)" d="M21 5h-9v1.5h3.5V18c0 2.8-1.8 4.5-4.5 4.5S7 20.8 7 18v-1.5H5V18c0 4 2.8 6.5 6.5 6.5S18 22 18 18V6.5H21V5z"/>
+</svg>

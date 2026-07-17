@@ -1,0 +1,72 @@
+{
+  "$schema": "../chain.schema.json",
+  "chain_name": "jeechain",
+  "chain_id": "JEE",
+  "pretty_name": "JEE",
+  "status": "live",
+  "network_type": "mainnet",
+  "website": "https://jee.money",
+  "description": "JEE Money — zero-fee Layer-1 powered by Mana. https://jee.money",
+  "bech32_prefix": "jee",
+  "daemon_name": "jeed",
+  "node_home": "$HOME/.jeechain",
+  "key_algorithms": ["secp256k1"],
+  "slip44": 118,
+  "fees": {
+    "fee_tokens": [
+      {
+        "denom": "jeff",
+        "fixed_min_gas_price": 0,
+        "low_gas_price": 0,
+        "average_gas_price": 0,
+        "high_gas_price": 0
+      }
+    ]
+  },
+  "staking": {
+    "staking_tokens": [
+      {
+        "denom": "jeff"
+      }
+    ]
+  },
+  "codebase": {
+    "git_repo": "https://github.com/SujayPro/jee-chain",
+    "recommended_version": "v0.1.0",
+    "compatible_versions": ["v0.1.0"],
+    "genesis": {
+      "genesis_url": "https://jee.money/genesis.json"
+    }
+  },
+  "logo_URIs": {
+    "png": "https://jee.money/assets/logo/jee-chain.png",
+    "svg": "https://jee.money/assets/logo/jee-chain.svg"
+  },
+  "peers": {
+    "seeds": [],
+    "persistent_peers": []
+  },
+  "apis": {
+    "rpc": [
+      {
+        "address": "https://rpc.jee.money",
+        "provider": "jee.money"
+      }
+    ],
+    "rest": [
+      {
+        "address": "https://api.jee.money",
+        "provider": "jee.money"
+      }
+    ]
+  },
+  "explorers": [
+    {
+      "kind": "jee",
+      "url": "https://jeescan.org",
+      "tx_page": "https://jeescan.org/tx/${txHash}",
+      "account_page": "https://jeescan.org/account/${accountAddress}"
+    }
+  ],
+  "keywords": ["jee", "jee-money", "zero-fee", "mana", "cosmos"]
+}

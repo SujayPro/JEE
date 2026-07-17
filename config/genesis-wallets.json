@@ -1,0 +1,42 @@
+{
+  "chain_id": "JEE",
+  "total_supply_jee": "247000000",
+  "note": "Validator wallet jee1qc6dml... holds 12.5229M JEE at genesis (10M staked via gentx + 2.5229M liquid).",
+  "wallets": [
+    {
+      "name": "community",
+      "address": "jee1gqu7qhvcv9p9x9m08xqnw4g7u08ct6d04g564p",
+      "amount_jee": "96057830",
+      "amount_jeff": "96057830000000",
+      "purpose": "Grants, airdrops, ecosystem"
+    },
+    {
+      "name": "public-reserve",
+      "address": "jee15hdqt89vpcduhff6yh3kmnlunngxpwj2j74phq",
+      "amount_jee": "81708070",
+      "amount_jeff": "81708070000000",
+      "purpose": "Future sale, partners, liquidity"
+    },
+    {
+      "name": "founder",
+      "address": "jee1569t9gs3ald3rsvnyct23y9esusrw03xmmwj9k",
+      "amount_jee": "30875000",
+      "amount_jeff": "30875000000000",
+      "purpose": "Founder allocation"
+    },
+    {
+      "name": "foundation",
+      "address": "jee1a5u6vulgfp78tk3fam8n7t2aks6exdm9nn6489",
+      "amount_jee": "25836200",
+      "amount_jeff": "25836200000000",
+      "purpose": "Governance, development fund"
+    },
+    {
+      "name": "validator",
+      "address": "jee1qc6dml9km2q28kv5f20p3wmwdn373nrxgtnw0z",
+      "amount_jee": "12522900",
+      "amount_jeff": "12522900000000",
+      "purpose": "Validator — signs gentx (10M staked) + ops liquid (2.5229M)"
+    }
+  ]
+}
